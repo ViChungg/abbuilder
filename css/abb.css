@@ -1,0 +1,21 @@
+body {
+	background-color: white;
+}
+
+.card {
+	margin: 10px;
+}
+
+#info1 {
+	background-image: url("http://stylevanity.com/wp-content/uploads/2017/10/how-to-pack-k-beauty-products-for-travel-featured-image.jpg");
+	background-repeat: none;
+	opacity: 0.8;
+	background-position: left;
+	
+}
+
+#routine {
+	padding: 20px; 
+	float: left; 
+	width: 500px;
+}

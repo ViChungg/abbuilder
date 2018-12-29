@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login</title>
+    <meta charset="utf-8" />
+
+    <!-- Java script files -->
+    <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+    <!-- CSS stylesheets -->
+    <link rel="stylesheet" type="text/css" href="../css/abb.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <script src="../js/load-firebase.js"></script>
+    <header>
+      <nav id="nav-bar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="routine.html">Routine</a></li>
+          <li><a href="diary.html">Diary</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- CONTENT -->
+    <article class="homepage_content">
+        <div id="firebaseui-auth-container"></div>
+        <div id="loader">Loading...</div>
+
+        <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+        <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
+        <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
+        <!--Loads the log-in UI provided by firebase-->
+        <script src="../js/load-firebase.js"></script>
+        <script src="../js/login.js"></script>
+    </article>
+</body>
+
+</html>

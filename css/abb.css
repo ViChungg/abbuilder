@@ -1,21 +1,90 @@
 body {
 	background-color: white;
+	font-family: arial;
+	margin: 0;
 }
 
-.card {
-	margin: 10px;
+a {
+	text-decoration: none;
+	color: black;
 }
 
-#info1 {
-	background-image: url("http://stylevanity.com/wp-content/uploads/2017/10/how-to-pack-k-beauty-products-for-travel-featured-image.jpg");
-	background-repeat: none;
-	opacity: 0.8;
-	background-position: left;
-	
+.active {
+	background-color: #dfdfdf;
 }
 
-#routine {
-	padding: 20px; 
-	float: left; 
-	width: 500px;
+#nav-bar ul {
+	list-style-type: none;
+	background-color: #ebebeb;
+	margin: 0;
+}
+
+#nav-bar ul li {
+	display: inline-block;
+	padding: 1vw;
+	font-size: 2vw;
+}
+
+#sidebar ul {
+	list-style-type: none;
+	background-color: #ebebeb;
+	margin: 0;
+}
+
+#sidebar ul li {
+	display: inline-block;
+	padding: 1vw;
+	font-size: 1.5vw;
+}	
+
+/*--------------------------------
+						DIARY PAGE
+----------------------------------*/
+#diary-content {
+	background-color: white;
+	height: 100vh;
+}
+
+#diary-content div {
+	padding: 1vw;
+}
+
+#overview {
+	display: block;
+}
+
+.div-active {
+	background-color: lightblue;
+	display: block;
+	height: 100%;
+}
+
+.tabs {
+	display: none;
+}
+
+.tab-content {
+	background-color: white;
+	border-radius: 1vw;
+}
+
+.tab-content h1 {
+	padding-left: 1em;
+	font-size: 2vw;
+}
+
+/*--------------------------------
+					PRODUCTS PAGE
+----------------------------------*/
+#products-content {
+	background-color: white;
+	height: 100vh;
+}
+
+#products-content div {
+	padding: 1vw;
+}
+
+.items {
+	display: inline-block;
 }

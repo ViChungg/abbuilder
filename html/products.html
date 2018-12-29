@@ -1,63 +1,94 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Asian Beauty Builder</title>
-		<meta charset="UTF-8">
-		<script src="../js/abb.js" type="text/javascript" defer></script>
-		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-		<link rel="stylesheet" href="../css/abb.css">
-	</head>
-	<header>
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		  <a class="navbar-brand" href="index.html">Asian Beauty Builder</a>
-		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		  </button>
-
-		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto">
-			  <li class="nav-item active">
-				<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-			  </li>
-			  <li class="nav-item dropdown">
-				<a class="nav-link dropdown-toggle" href="routine.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Build</a>
-				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-				  <a class="dropdown-item" href="routine.html">Routine</a>
-				  <a class="dropdown-item" href="diary.html">Diary</a>
-				</div>
-			  </li>
-			  <li class="nav-item dropdown">
-				<a class="nav-link dropdown-toggle" href="products.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				  Products
-				</a>
-				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-				  <a class="dropdown-item" href="#">Action</a>
-				  <a class="dropdown-item" href="#">Another action</a>
-				  <div class="dropdown-divider"></div>
-				  <a class="nav-link" href="#">Something else here</a>
-				</div>
-			  </li>
-			  <li class="nav-item">
-				<a class="nav-link" href="about.html">About</a>
-			  </li>
-			  <li class="nav-item">
-				<a class="nav-link" href="contact.html">Contact</a>
-			  </li>
-			</ul>
-			<form class="form-inline my-2 my-lg-0">
-			  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-			  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-			</form>
-		  </div>
-		</nav>
-	</header>
-	<body>
-		<div id="info" class="container">
-			<p>PRODUCTS</p>
-			
-		</div>
-	</body>
+<head>
+  <title>Asian Beauty Builder</title>
+  <meta charset="utf-8">
+  <link rel='stylesheet' type='text/css' href="../css/abb.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-app.js"></script>
+</head>
+<body>
+	<script src="../js/load-firebase.js"></script>
+  <header>
+    <nav id="nav-bar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="routine.html">Routine</a></li>
+        <li><a href="diary.html">Diary</a></li>
+        <li class="active"><a href="products.html">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+    <div class="container">
+  	<nav id="sidebar">
+  		<ul>
+  			<li><a href="#overview" id="nav-overview">Overview</a></li>
+  			<li><a href="#cleansers" id="nav-cleansers">Cleansers</a></li>
+  			<li><a href="#exfoliators" id="nav-exfoliators">Exfoliators</a></li>
+  			<li><a href="#serums" id="nav-serums">Serums</a></li>
+  			<li><a href="#essences" id="nav-essences">Essences</a></li>
+  			<li><a href="#toners" id="nav-toners">Toners</a></li>
+  			<li><a href="#mists" id="nav-mists">Mists</a></li>
+  			<li><a href="#moisturizers" id="nav-moisturizers">Moisturizers</a></li>
+  			<li><a href="#masks" id="nav-masks">Masks</a></li>
+  		</ul>
+  	</nav>
+  	<div id="products-content">
+  		<div id="overview" class="div-active tabs">
+  			<div id="overview-container" class="tab-content">
+  				<h1>Overview</h1>
+  			</div>
+  		</div>
+  		<div id="cleansers" class="tabs">
+  			<div id="cleansers-container" class="tab-content">
+  				<h1>Cleansers</h1>
+  			</div>
+  		</div>
+  		<div id="exfoliators" class="tabs">
+  			<div id="exfoliators-container" class="tab-content">
+  				<h1>Exfoliators</h1>
+  			</div>
+  		</div>
+  		<div id="serums" class="tabs">
+  			<div id="serums-container" class="tab-content">
+  				<h1>Serums</h1>
+  			</div>
+  		</div>
+  		<div id="essences" class="tabs">
+  			<div id="essences-container" class="tab-content">
+  				<h1>Essences</h1>
+  			</div>
+  		</div>
+  		<div id="toners" class="tabs">
+  			<div id="toners-container" class="tab-content">
+  				<h1>Toners</h1>
+  			</div>
+  		</div>
+  		<div id="mists" class="tabs">
+  			<div id="mists-container" class="tab-content">
+  				<h1>Mists</h1>
+  			</div>
+  		</div>
+  		<div id="moisturizers" class="tabs">
+  			<div id="moisturizers-container" class="tab-content">
+  				<h1>Moisturizers</h1>
+  			</div>
+  		</div>
+  		<div id="masks" class="tabs">
+  			<div id="masks-container" class="tab-content">
+  				<h1>Masks</h1>
+  			</div>
+  		</div>
+  	</div>
+  </div>
+  <script type="text/javascript" src="../js/abb.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-database.js"></script>
+  <script type="text/javascript" src="../js/products.js"></script>
+</body>
 </html>

@@ -39,14 +39,27 @@ $(document).ready(function() {
 				let prod = products.child(parentId);
 				let text = $(this).val().toLowerCase();
 				let itemDiv = document.getElementById(parentId + '-items');
+				let brand = $(this).next().val();
+				console.log(brand);
 				prod.once('value', function(snapshot) {
 					snapshot.forEach(function(items) {
 						let name = items.key.toString();
-						if (name.toLowerCase().indexOf(text) > -1) {
-							document.getElementById(name).style.display = "";
-						} else {
-							console.log("HMMM");
-							document.getElementById(name).style.display = "none";
+						if (brand == 'all') {
+							if (name.toLowerCase().indexOf(text) > -1) {
+								document.getElementById(name).style.display = "";
+							} else {
+								console.log("HMMM");
+								document.getElementById(name).style.display = "none";
+							}
+						} else if (brand == items.val()['brand']) {
+							
+							if (name.toLowerCase().indexOf(text) > -1) {
+								document.getElementById(name).style.display = "";
+							} else {
+								console.log("HMMM");
+								document.getElementById(name).style.display = "none";
+							}
+							
 						}
 					})
 				});	

@@ -1,0 +1,69 @@
+{
+  "products" : {
+    "cleansers" : {
+      "cleanser1" : {
+        "brand" : "brand1"
+      },
+      "cleanser2" : {
+        "brand" : "brand2"
+      }
+    },
+    "essences" : {
+      "essence1" : {
+        "brand" : "brand1"
+      },
+      "essence2" : {
+        "brand" : "brand2"
+      }
+    },
+    "exfoliators" : {
+      "exfoliator1" : {
+        "brand" : "brand1"
+      },
+      "exfoliator2" : {
+        "brand" : "brand2"
+      }
+    },
+    "masks" : {
+      "mask1" : {
+        "brand" : "brand1"
+      },
+      "mask2" : {
+        "brand" : "brand2"
+      }
+    },
+    "mists" : {
+      "mist1" : {
+        "brand" : "brand1"
+      },
+      "mist2" : {
+        "brand" : "brand2"
+      }
+    },
+    "moisturizers" : {
+      "moisture1" : {
+        "brand" : "brand1"
+      },
+      "moisture2" : {
+        "brand" : "brand2"
+      }
+    },
+    "serums" : {
+      "serum1" : {
+        "brand" : "brand1"
+      },
+      "serum2" : {
+        "brand" : "brand2"
+      }
+    },
+    "toners" : {
+      "toner1" : {
+        "brand" : "brand1"
+      },
+      "toner2" : {
+        "brand" : "brand2"
+      }
+    }
+  },
+  "brands" : [ "brand1", "brand2", "brand3" ]
+}

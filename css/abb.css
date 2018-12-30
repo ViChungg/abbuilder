@@ -22,7 +22,7 @@ a {
 #nav-bar ul li {
 	display: inline-block;
 	padding: 1vw;
-	font-size: 2vw;
+	font-size: 3vh;
 }
 
 #sidebar ul {
@@ -34,7 +34,7 @@ a {
 #sidebar ul li {
 	display: inline-block;
 	padding: 1vw;
-	font-size: 1.5vw;
+	font-size: 2vh;
 }	
 
 /*--------------------------------
@@ -65,12 +65,13 @@ a {
 
 .tab-content {
 	background-color: white;
-	border-radius: 1vw;
+	border-radius: 0vw;
+	padding: 2em;
 }
 
 .tab-content h1 {
-	padding-left: 1em;
-	font-size: 2vw;
+	padding: 0em;
+	margin: 0em;
 }
 
 /*--------------------------------
@@ -81,10 +82,24 @@ a {
 	height: 100vh;
 }
 
-#products-content div {
+#products-content > div {
 	padding: 1vw;
 }
 
 .items {
 	display: inline-block;
+	padding: 2vw;
+	margin: 1vw 2vw 1vw 0vw;
+	border: 1px solid #000;
+}
+
+.tab-content input {
+	display: block;
+	margin: 1vw 2vw 1vw 0vw;
+	padding: 1em;
+	width: 80%;
+}
+
+.product-img {
+	display: block;
 }

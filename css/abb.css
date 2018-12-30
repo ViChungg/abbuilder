@@ -45,10 +45,6 @@ a {
 	height: 100vh;
 }
 
-#diary-content div {
-	padding: 1vw;
-}
-
 #overview {
 	display: block;
 }
@@ -82,13 +78,13 @@ a {
 	height: 100vh;
 }
 
-#products-content > div {
+#products-content > div, #diary-content > div {
 	padding: 1vw;
 }
 
 .items {
 	display: inline-block;
-	padding: 2vw;
+	padding: 1vw;
 	margin: 1vw 2vw 1vw 0vw;
 	border: 1px solid #000;
 }

@@ -1,4 +1,5 @@
 {
+  "brands" : [ "brand1", "brand2", "brand3" ],
   "products" : {
     "cleansers" : {
       "cleanser1" : {
@@ -65,5 +66,10 @@
       }
     }
   },
-  "brands" : [ "brand1", "brand2", "brand3" ]
+  "users" : {
+    "ZS2H3Sw2GfWWHrZTt5pHdRFrMyI3" : {
+      "email" : "test@abb.ca",
+      "name" : "test tester"
+    }
+  }
 }

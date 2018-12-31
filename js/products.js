@@ -3,6 +3,7 @@ $(document).ready(function() {
 	var firebase = app_firebase;
 	let products = firebase.database().ref("products");
 	let brands = firebase.database().ref("brands");
+	let modal = document.getElementById("product-reviews");
 
 	firebase.auth().onAuthStateChanged(function(user) {
 		let dropdowns = document.getElementsByClassName("brands");
@@ -85,6 +86,27 @@ $(document).ready(function() {
 			});
 
 		});
+
+		// pops up modal that has ratings and reviews for product
+		$('body').on('click','.items', function() {
+			let itemInfo = $(this).attr('id');
+			//let modalContent = $(".modal-content img").attr('src', image);
+			$(modal).css("display", "block");
+			console.log(itemInfo);
+		});
+
+		$('.modal').on('click', 'span', function() {
+			$(modal).css('display', 'none');
+		});
+
+		$(window).on('click', function(event) {
+			if (event.target == modal) {
+				$(modal).css('display', 'none');
+			}
+		});
+
 	});
+
+	
 })
 
